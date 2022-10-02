@@ -1,70 +1,80 @@
-Red_button = findViewById(R.id.Red_button);
+package com.example.atributi;
 
-        Red_button.setOnClickListener(new View.OnClickListener() {
+import androidx.appcompat.app.AppCompatActivity;
+
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
+import com.example.atributi.R;
+
+
+public class MainActivity extends AppCompatActivity {
+    private EditText ed_text;
+    private Button black_button;
+    private Button red_button;
+    private Button size1_button;
+    private Button size2_button;
+    private Button white_button;
+    private Button yellow_button;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        ed_text = findViewById(R.id.editTextTextPersonName);
+        black_button = findViewById(R.id.button);
+
+        black_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView textView = findViewById(R.id.editTextTextPersonName);
-                String text = "Name";
-                SpannableString ss = new SpannableString(text);
-                ForegroundColorSpan fcsBlack = new ForegroundColorSpan(Color.Black);
-                ss.setSpan(fcsBlack,0,4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                textView.setText(ss);
+                ed_text.setTextColor(-16777216);
             }
         });
-       Size1_button = findViewById(R.id.Size1_button);
+        red_button = findViewById(R.id.Red_button);
 
-        Size1_button.setOnClickListener(new View.OnClickListener() {
+        red_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView textView = findViewById(R.id.editTextTextPersonName);
-                String text = "Name";
-                SpannableString ss = new SpannableString(text);
-                ForegroundColorSpan fcsBlack = new ForegroundColorSpan(Color.Black);
-                ss.setSpan(fcsBlack,0,4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                textView.setText(ss);
+                ed_text.setTextColor(-65536);
             }
+
 
         });
-        Size2_button = findViewById(R.id.Size2_button);
+        size1_button = findViewById(R.id.Size1_button);
 
-        Size2_button.setOnClickListener(new View.OnClickListener() {
+        size1_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView textView = findViewById(R.id.editTextTextPersonName);
-                String text = "Name";
-                SpannableString ss = new SpannableString(text);
-                ForegroundColorSpan fcsBlack = new ForegroundColorSpan(Color.Black);
-                ss.setSpan(fcsBlack,0,4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                textView.setText(ss);
+                ed_text.setTextSize(85);
             }
-
         });
-        White_button = findViewById(R.id.White_button);
+        size2_button = findViewById(R.id.Size2_button);
 
-        White_button.setOnClickListener(new View.OnClickListener() {
+        size2_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView textView = findViewById(R.id.editTextTextPersonName);
-                String text = "Name";
-                SpannableString ss = new SpannableString(text);
-                ForegroundColorSpan fcsBlack = new ForegroundColorSpan(Color.Black);
-                ss.setSpan(fcsBlack,0,4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                textView.setText(ss);
+                ed_text.setTextSize(24);
             }
-
         });
-        Yellow_button = findViewById(R.id.Yellow_button);
+        white_button = findViewById(R.id.White_button);
 
-        Yellow_button.setOnClickListener(new View.OnClickListener() {
+        white_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView textView = findViewById(R.id.editTextTextPersonName);
-                String text = "Name";
-                SpannableString ss = new SpannableString(text);
-                ForegroundColorSpan fcsBlack = new ForegroundColorSpan(Color.Black);
-                ss.setSpan(fcsBlack,0,4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                textView.setText(ss);
+                ed_text.setBackgroundColor(200);
             }
+        });
+        yellow_button = findViewById(R.id.Yellow_button);
 
+        yellow_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ed_text.setBackgroundColor(-252);
+            }
         });
     }
+}
