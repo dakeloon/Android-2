@@ -8,13 +8,12 @@ import com.example.toasthandler.R
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
-    private var main_btn: Button? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        main_btn = findViewById(R.id.button_ok)
-        main_btn?.setOnClickListener {
+        val mainbtn:Button = findViewById(R.id.button_ok)
+        mainbtn.setOnClickListener {
             Toast.makeText(this, "Кнопка ок", Toast.LENGTH_LONG).show()
         }
 
