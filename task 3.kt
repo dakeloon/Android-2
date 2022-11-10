@@ -41,4 +41,3 @@ class MainActivity : AppCompatActivity() {
             text.setBackgroundColor(Color.YELLOW)
         }
     }
-}
